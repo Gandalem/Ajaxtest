@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AJAX-LAB</title>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+	integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>Ajax-LAB</h1>
+	
+	<div>
+	<input id="num1" type="number"> + <input id="num2" type="number"> <span style="border: 1 black solid;" name="sum" id="sum"></span>
+	<div><button onclick="a" id="a">계산</button></div>
+	</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+	calculateTotal();
+	
+	$("#a").click(function(){
+		calculateTotal();
+	});
+});
+
+function calculateTotal() {
+	var num1 = parseInt($('#num1').val());
+	var num2 = parseInt($('#num2').val());
+	var sum = num1 + num2;
+	$("#sum").html(sum);
+}
+	    
+	
+
+</script>
+</html>

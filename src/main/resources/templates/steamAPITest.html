@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+const API_KEY = 'EFB43CDDC613D2A04D8115E567E23E3F';
+const appid = '250900';
+
+const url = `https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=${API_KEY}&appid=${appid}`;
+
+fetch(url, { mode: 'cors' })
+  .then(response => response.json())
+  .then(data => console.log(data));
+</script>
+<body>
+
+</body>
+</html>
